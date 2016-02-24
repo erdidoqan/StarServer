@@ -1,0 +1,16 @@
+#accordion .panel-heading { padding: 0;}
+#accordion .panel-title > a {
+    display: block;
+    padding: 0.8em 0.8em;
+    outline: none;
+    text-decoration: none;
+}
+
+.input-xs {
+    height: 22px;
+    width: 22px;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-top:1px;
+    border-radius: 3px;
+}
