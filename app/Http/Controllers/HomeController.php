@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Models\Basket;
 use App\Models\Category;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,6 +29,8 @@ class HomeController extends Controller
     public function index()
     {
         $category = Category::all();
-        return view('home.dash.index')->with('category',$category);
+        $allBasket = Basket::all();
+
+        return view('home.dash.index')->with('category',$category)->with('allBasket',$allBasket);
     }
 }

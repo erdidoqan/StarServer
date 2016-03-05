@@ -14,3 +14,34 @@
     margin-top:1px;
     border-radius: 3px;
 }
+
+.ds-btn li{ list-style:none; float:left; padding:10px; }
+.ds-btn li a span{padding-left:15px;padding-right:5px;width:100%;display:inline-block; text-align:left;}
+.ds-btn li a span small{width:100%; display:inline-block; text-align:left;}
+
+.sepet{
+    position: fixed;
+    bottom: 0px;
+    margin-left: auto;
+    right:15px;
+}
+
+.btn-sepet {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+body .fis-button{
+    border-radius:0;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    width:260px
+}
+
+.sepet-box{
+    position: relative;
+    background: #ffffff;
+    width: 100%;
+}

@@ -20,11 +20,14 @@
        </div><!-- /.box -->
    </div>
 
+
+
    <div class="col-sm-12">
        <div class="box">
            <div class="box-body">
                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                    @foreach($category as $cata)
+
                    <div class="panel panel-default">
                        <div class="panel-heading" role="tab" id="{{$cata->id}}">
                            <h4 class="panel-title">
@@ -37,30 +40,22 @@
                            <div class="panel-body">
                                <div class="box-body no-padding">
                                <table class="table table-striped">
+                                   <thead>
                                    <tr>
-                                       <td style="width:10px"><button class="btn btn-primary btn-xs"><i class="fa fa-plus"></i></button></td>
-                                       <td style="width:1px"><input class="form-control input-xs" name="quanty" maxlength="2" value="1"></td>
-                                       <td>Whopper® Menü</td>
-                                       <td>&#163; 16,50</td>
+                                       <th>Add</th>
+                                       <th></th>
+                                       <th>Menu Name</th>
+                                       <th>Price</th>
                                    </tr>
+                                   </thead>
+                                   @foreach($cata->menu as $menu)
                                    <tr>
-                                       <td style="width:10px"><button class="btn btn-primary btn-xs"><i class="fa fa-plus"></i></button></td>
-                                       <td style="width:1px"><input class="form-control input-xs" name="quanty" maxlength="2" value="1"></td>
-                                       <td>Double Whopper® Menü</td>
-                                       <td>&#163; 22,50</td>
+                                       <td style="width:10px"><a id="add-button" data-menu-name="{{$menu->menu_name}}" data-menu-id="{{$menu->id}}" data-cate-id="{{$cata->id}}" data-price="{{$menu->price}}" class="btn btn-primary add-button"><i class="fa fa-plus"></i></a></td>
+                                       <td></td>
+                                       <td>{{$menu->menu_name}}</td>
+                                       <td>&#163; {{$menu->price}}</td>
                                    </tr>
-                                   <tr>
-                                       <td style="width:10px"><button class="btn btn-primary btn-xs"><i class="fa fa-plus"></i></button></td>
-                                       <td style="width:1px"><input class="form-control input-xs" name="quanty" maxlength="2" value="1"></td>
-                                       <td>Triple Whopper® Menü</td>
-                                       <td>&#163; 27,50</td>
-                                   </tr>
-                                   <tr>
-                                       <td style="width:10px"><button class="btn btn-primary btn-xs"><i class="fa fa-plus"></i></button></td>
-                                       <td style="width:1px"><input class="form-control input-xs" name="quanty" maxlength="2" value="1"></td>
-                                       <td>Whopper Jr.® Menü</td>
-                                       <td>&#163; 12,50</td>
-                                   </tr>
+                                   @endforeach
                                </table>
                            </div>
                            </div>
@@ -73,5 +68,49 @@
        </div>
    </div>
 
+   <div class="sepet">
+       <a class="btn btn-primary fis-button" id="sepet-buton">
+           <i class="fa fa-shopping-basket pull-left"></i><span>Sepet</span>
+       </a>
+       <div class="sepet-box">
+           <div class="box-body">
+               @foreach($allBasket as $basket)
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                   <h5>{{$basket->menu_name}}</h5>
+                   <p><input class="form-control input-xs" name="quanty" maxlength="2" value="1"> x £ 16,50</p>
+                   <hr>
+               @endforeach
+               <a href="/basket" class="btn btn-block btn-sm btn-success">Print</a>
+           </div>
+       </div>
+   </div>
+
+    <script>
+        $(document).ready(function () {
+            var box = $('.sepet-box');
+            box.hide();
+            $('body').on('click','#sepet-buton',function(){
+                box.slideToggle('slow');
+            });
+
+            $('body').on('click','.add-button',function(event){
+                var menu_name = $(this).attr('data-menu-name'),
+                    menu_id = $(this).attr('data-menu-id'),
+                    category_id = $(this).attr('data-cate-id'),
+                    price = $(this).attr('data-price');
+
+                $('#addToBasket').modal('show');
+
+                $('#menu-sepet input[name="menu_name"]').val(menu_name);
+                $('#menu-sepet input[name="menu_id"]').val(menu_id);
+                $('#menu-sepet input[name="category_id"]').val(category_id);
+                $('#menu-sepet input[name="price"]').val(price);
+                $('#menu_name').html(menu_name);
+                $('#price').html('&#163;' + price);
+            });
+        });
+
+
+    </script>
    @include('home.partials.model')
 @endsection

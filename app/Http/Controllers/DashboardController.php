@@ -40,6 +40,7 @@ class DashboardController extends Controller
         $menu = new Menu();
         $menu->menu_name = Input::get('menu_name');
         $menu->category_id = Input::get('category');
+        $menu->price = Input::get('price');
         if($menu->save()){
             return Redirect::to('/');
         }else{

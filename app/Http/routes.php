@@ -13,4 +13,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', 'HomeController@index');
     Route::post('/addNewCategory', 'DashboardController@postAddNewCategory');
     Route::post('/addNewMenu', 'DashboardController@postAddNewMenu');
+    Route::get('/basket', 'BasketController@basket');
+    Route::post('/basket/new','BasketController@newBasket');
 });
