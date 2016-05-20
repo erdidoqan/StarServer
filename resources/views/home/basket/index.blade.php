@@ -325,8 +325,8 @@
                     <dt>Paper Width</dt>
                     <dd>:
                         <select id='paperWidth' onchange='onResizeCanvas(); refocusWidthSelectbox();'>
-                            <option value='inch2' selected='selected'>2 Inch</option>
-                            <option value='inch3'>3 Inch</option>
+                            <option value='inch2'>2 Inch</option>
+                            <option value='inch3'selected='selected'>3 Inch</option>
                             <option value='inch4'>4 Inch</option>
                         </select>
                     </dd>
