@@ -28,12 +28,12 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5846325">
-              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.42162162">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
-                <element signature="e#11289#11311#0#HTML" expanded="true" />
-                <element signature="e#12725#12747#0#HTML" expanded="true" />
-                <element signature="e#12769#12791#0#HTML" expanded="true" />
+                <element signature="e#11399#11421#0#HTML" expanded="true" />
+                <element signature="e#12835#12857#0#HTML" expanded="true" />
+                <element signature="e#12879#12901#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -571,7 +571,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463779078245</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="jkhk newst">
+      <created>1463779521709</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1463779521709</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -622,16 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -993,14 +989,22 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/b335f32eb5c7248a06307ec48929ae4ff3fc10b6.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.16108108">
+          <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5846325">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.42162162">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding>
-            <element signature="e#11289#11311#0#HTML" expanded="true" />
-            <element signature="e#12725#12747#0#HTML" expanded="true" />
-            <element signature="e#12769#12791#0#HTML" expanded="true" />
+            <element signature="e#11399#11421#0#HTML" expanded="true" />
+            <element signature="e#12835#12857#0#HTML" expanded="true" />
+            <element signature="e#12879#12901#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -100,7 +100,7 @@
 //      cursor = 0;
                 cursor = 55 * logoScale; // ロゴが入るスペースを空けておく
                 cursor += lineSpace;
-
+                DrawCenterText("Ground Floor Block A Trinity Square 127 Brington Road."); cursor += lineSpace;
                 cursor += lineSpace;
                 @foreach($allBasket as $basket)
                     DrawLeftText('{{$basket->menu_name}}');    DrawRightText('{{$basket->price}}');  cursor += lineSpace;
