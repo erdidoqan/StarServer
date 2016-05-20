@@ -98,7 +98,7 @@
                 rightPosition  = (canvas.width - 16);
 
 //      cursor = 0;
-                cursor = 55 * logoScale; // ロゴが入るスペースを空けておく
+                cursor = 120 * logoScale; // ロゴが入るスペースを空けておく
                 cursor += lineSpace;
                 DrawCenterText("Ground Floor Block A Trinity Square 127 Brington Road."); cursor += lineSpace;
                 cursor += lineSpace;
@@ -127,7 +127,7 @@
                 image.src = 'assets/img/logo.png' + '?' + new Date().getTime();
 
                 image.onload = function () {
-                    context.drawImage(image, canvas.width - image.width * logoScale, 0, image.width * logoScale, image.height * logoScale);
+                    context.drawImage(image, 350 - image.width * logoScale, 0, image.width * logoScale, image.height * logoScale);
                 }
 
                 image.onerror = function () {

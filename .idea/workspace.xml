@@ -28,12 +28,12 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46486485">
-              <caret line="260" column="49" selection-start-line="260" selection-start-column="49" selection-end-line="260" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.46594596">
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding>
-                <element signature="e#11715#11737#0#HTML" expanded="true" />
-                <element signature="e#13134#13156#0#HTML" expanded="true" />
-                <element signature="e#13178#13200#0#HTML" expanded="true" />
+                <element signature="e#11707#11729#0#HTML" expanded="true" />
+                <element signature="e#13126#13148#0#HTML" expanded="true" />
+                <element signature="e#13170#13192#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -595,7 +595,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463781319044</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="jkhk newst">
+      <created>1463781515550</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1463781515550</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1017,12 +1023,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46486485">
-          <caret line="260" column="49" selection-start-line="260" selection-start-column="49" selection-end-line="260" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.46594596">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding>
-            <element signature="e#11715#11737#0#HTML" expanded="true" />
-            <element signature="e#13134#13156#0#HTML" expanded="true" />
-            <element signature="e#13178#13200#0#HTML" expanded="true" />
+            <element signature="e#11707#11729#0#HTML" expanded="true" />
+            <element signature="e#13126#13148#0#HTML" expanded="true" />
+            <element signature="e#13170#13192#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
