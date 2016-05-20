@@ -97,8 +97,6 @@
 
                 var font = '';
 
-                if (document.getElementById('italic').checked) font += 'italic ';
-
                 font += fontSize + 'px ';
 
                 font += document.getElementById('font').value;
@@ -335,7 +333,7 @@
                     <dt>Font</dt>
                     <dd>:
                         <select id='font' onchange='onDrawReceipt(); refocusFontSelectbox();'>
-                            <option selected='selected'>Arial</option>
+                            <option>Arial</option>
                             <option>Cambria</option>
                             <option>Comic Sans MS</option>
                             <option>Constantia</option>
@@ -344,6 +342,8 @@
                             <option>Segoe UI</option>
                             <option>Fixedsys</option>
                             <option>MS Serif</option>
+                            <option>Lato</option>
+                            <option selected='selected'>Roboto</option>
                         </select>
                         &nbsp;<input id='italic' type='checkbox' onclick='onDrawReceipt()' />Italic
                     </dd>
