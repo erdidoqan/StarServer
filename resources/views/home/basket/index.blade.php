@@ -10,7 +10,7 @@
                         <div class="col-xs-12">
                             <h2 class="page-header">
                                 <i class="fa fa-globe"></i> StarServer
-                                <small class="pull-right">Date: 2/10/2014</small>
+                                <small class="pull-right">Date: {{date_format($date->created_at,'d/m/Y H:i')}}</small>
                             </h2>
                         </div><!-- /.col -->
                     </div>
@@ -24,40 +24,17 @@
                                 <tr>
                                     <th>Qty</th>
                                     <th>Product</th>
-                                    <th>Serial #</th>
-                                    <th>Description</th>
                                     <th>Subtotal</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($allBasket as $basket)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Call of Duty</td>
-                                    <td>455-981-221</td>
-                                    <td>El snort testosterone trophy driving gloves handsome</td>
-                                    <td>$64.50</td>
+                                    <td>{{$basket->count}}</td>
+                                    <td>{{$basket->menu_name}}</td>
+                                    <td>&#163; {{StarLib::sumWithCount($basket->price,$basket->count)}}</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Need for Speed IV</td>
-                                    <td>247-925-726</td>
-                                    <td>Wes Anderson umami biodiesel</td>
-                                    <td>$50.00</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Monsters DVD</td>
-                                    <td>735-845-642</td>
-                                    <td>Terry Richardson helvetica tousled street art master</td>
-                                    <td>$10.70</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Grown Ups Blue Ray</td>
-                                    <td>422-568-642</td>
-                                    <td>Tousled lomo letterpress</td>
-                                    <td>$25.99</td>
-                                </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div><!-- /.col -->
@@ -69,7 +46,7 @@
 
                         </div>
                         <div class="col-xs-6">
-                            <p class="lead">Amount Due 2/22/2014</p>
+                            <p class="lead">Amount Due {{date_format($date->created_at,'d/m/Y H:i')}}</p>
                             <div class="table-responsive">
                                 <table class="table">
                                     <tr>

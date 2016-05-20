@@ -69,7 +69,7 @@
    </div>
 
    <div class="sepet">
-       <a class="btn btn-primary fis-button" id="sepet-buton">
+       <a class="btn btn-primary btn-lg fis-button" id="sepet-buton">
            <i class="fa fa-shopping-basket pull-left"></i><span>Sepet</span>
        </a>
        <div class="sepet-box">

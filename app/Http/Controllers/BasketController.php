@@ -16,23 +16,28 @@ class BasketController extends Controller
 {
     public function basket()
     {
-        return view('home.basket.index');
+        $allBasket = Basket::all();
+        $date = Basket::orderBy('id','desc')->first();
+        return view('home.basket.index')->with('allBasket',$allBasket)->with('date',$date);
     }
 
     public function newBasket()
     {
-        //return Input::all();
-        $basket = new Basket();
-        $basket->menu_name = Input::get('menu_name');
-        $basket->menu_id = Input::get('menu_id');
-        $basket->category_id = Input::get('category_id');
-        $basket->price = Input::get('price');
-        $basket->count = Input::get('count');
+        $newBasket = Basket::firstOrCreate(array(
+            'menu_name' => Input::get('menu_name'),
+            'menu_id' => Input::get('menu_id'),
+            'category_id' => Input::get('category_id'),
+            'price' => Input::get('price'),
+            'promotion_type' => Input::get('promotionType'),
+            'promotion' => Input::get('promotion')
+        ));
 
-        if($basket->save()){
+        $newBasket->count = Input::get('count');
+
+        if($newBasket->save()){
             return Redirect::to('/');
         }else{
-            return Redirect::to('/')->with('error','Error');
+            return Redirect::to('/');
         }
     }
 }

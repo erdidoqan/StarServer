@@ -28,6 +28,8 @@ class CreateBasketsTable extends Migration
                 ->onDelete('cascade');
 
             $table->string('price');
+            $table->string('promotion_type')->nullable();
+            $table->string('promotion')->nullable();
             $table->integer('count');
             $table->timestamps();
         });
