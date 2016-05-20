@@ -59,10 +59,10 @@
                     drawReceipt(28, 28, 384, 1);
                     break;
                 case 'inch3DotImpact' :
-                    drawReceipt(32, 32, 576, 1.5);
+                    drawReceipt(32, 12, 576, 1.5);
                     break;
                 default :
-                    drawReceipt(32, 32, 576, 1.5);
+                    drawReceipt(30, 32, 576, 1.5);
                     break;
                 case 'inch4' :
                     drawReceipt(48, 48, 832, 2);
@@ -99,8 +99,10 @@
 
 //      cursor = 0;
                 cursor = 120 * logoScale; // ロゴが入るスペースを空けておく
-                cursor += lineSpace;
-                DrawCenterText("Ground Floor Block A Trinity Square 127 Brington Road."); cursor += lineSpace;
+                DrawCenterText("Ground Floor Block A Trinity Square"); cursor += lineSpace;
+                DrawCenterText("127 Brighton Road"); cursor += lineSpace;
+                DrawCenterText("CR5 2NJ"); cursor += lineSpace;
+                DrawCenterText("VAT NO: 627 0767 30"); cursor += lineSpace;
                 cursor += lineSpace;
                 @foreach($allBasket as $basket)
                     DrawLeftText('{{$basket->menu_name}}');    DrawRightText('{{$basket->price}}');  cursor += lineSpace;
@@ -160,7 +162,7 @@
                         canvas.height = 952;
                         break;
                 }
-                document.getElementById('canvasPaper').style.width="400px";
+                document.getElementById('canvasPaper').style.width="350px";
                 onDrawReceipt();
             }
         }
