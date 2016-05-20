@@ -102,13 +102,10 @@
                 cursor += lineSpace;
 
                 cursor += lineSpace;
+                @foreach($allBasket as $basket)
+                    DrawLeftText('{{$basket->menu_name}}');    DrawRightText('{{$basket->price}}');  cursor += lineSpace;
+                @endforeach
 
-                DrawLeftText('Apple');    DrawRightText('$20.00');  cursor += lineSpace;
-                DrawLeftText('Banana');   DrawRightText('$30.00');  cursor += lineSpace;
-                DrawLeftText('Grape');    DrawRightText('$40.00');  cursor += lineSpace;
-                DrawLeftText('Lemon');    DrawRightText('$50.00');  cursor += lineSpace;
-                DrawLeftText('Orange');   DrawRightText('$60.00');  cursor += lineSpace;
-                DrawLeftText('Subtotal'); DrawRightText('$200.00'); cursor += lineSpace;
 
                 cursor += lineSpace;
 
