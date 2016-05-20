@@ -273,6 +273,20 @@
         }
         // -->
     </script>
+    <style>
+        #foooter {
+            width: 600px;
+            height: 50px;
+            border-radius: 10px 10px 0px 0px;
+            text-align: center;
+            padding: 5px;
+
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            margin-left: -300px;
+        }
+    </style>
 
     <div id="overlay">
         <div id="nowPrintingWrapper">
@@ -359,7 +373,7 @@
                     </d1>
 
             </footer>
-            <div class="col-sm-5">
+            <div class="col-sm-5" id="foooter">
                 <input id="sendBtn" class="btn btn-primary btn-block" type="button" value="Print" onclick="onSendMessage()" />
             </div>
 
