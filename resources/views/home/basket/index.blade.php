@@ -129,7 +129,7 @@
                 image.src = 'assets/img/logo.png' + '?' + new Date().getTime();
 
                 image.onload = function () {
-                    context.drawImage(image, 350 - image.width * logoScale, 0, image.width * logoScale, image.height * logoScale);
+                    context.drawImage(image, 370 - image.width * logoScale, 0, image.width * logoScale, image.height * logoScale);
                 }
 
                 image.onerror = function () {
