@@ -133,7 +133,7 @@
 
                 var image = new Image();
 
-                image.src = 'img/StarLogo1.jpg' + '?' + new Date().getTime();
+                image.src = 'assets/img/pizzaexpress.png' + '?' + new Date().getTime();
 
                 image.onload = function () {
                     context.drawImage(image, canvas.width - image.width * logoScale, 0, image.width * logoScale, image.height * logoScale);
@@ -305,8 +305,8 @@
     </div>
 
     <header id="global-header">
-        <h1><a href="A001.html"><img src="images/logo_01.png" alt="HOME" width="108" height="61"></a></h1>
-        <div id="sub-logo"><a href="http://www.star-m.jp/" target="_blank"><img src="images/logo_02.png" alt="" width="120" height="13"></a></div>
+        <h1><a href="A001.html"><img src="assets/img/pizzaexpress.png" alt="HOME" width="108" height="61"></a></h1>
+        <div id="sub-logo"><a href="http://www.star-m.jp/" target="_blank"><img src="assets/img/pizzaexpress.png" alt="" width="120" height="13"></a></div>
     </header>
 
     <section class="btmMg20">

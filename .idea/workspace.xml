@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4b3d6b3-8fa5-492d-b5e6-3d493618f7b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/StarBarcodeEncoder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/StarWebPrintBuilder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/StarWebPrintTrader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/jquery.mobile-1.0rc2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/img/pizzaexpress.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home/basket/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/home/basket/index.blade.php" />
     </list>
@@ -32,8 +29,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.1297297">
-              <caret line="394" column="13" selection-start-line="394" selection-start-column="13" selection-end-line="394" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.23273942">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -198,7 +195,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -435,10 +432,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -457,6 +450,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -473,6 +470,9 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$/app" />
@@ -531,7 +531,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463758968114</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="jkhk newst">
+      <created>1463777616545</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1463777616545</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -572,7 +578,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jkhk" />
-    <option name="LAST_COMMIT_MESSAGE" value="jkhk" />
+    <MESSAGE value="jkhk newst" />
+    <option name="LAST_COMMIT_MESSAGE" value="jkhk newst" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -957,8 +964,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.1297297">
-          <caret line="394" column="13" selection-start-line="394" selection-start-column="13" selection-end-line="394" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.23273942">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding />
         </state>
       </provider>
