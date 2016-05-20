@@ -100,8 +100,6 @@
 //      cursor = 0;
                 cursor = 55 * logoScale; // ロゴが入るスペースを空けておく
 
-                DrawRightText('TEL 9999-99-9999'); cursor += lineSpace;
-
                 cursor += lineSpace;
 
                 cursor += lineSpace;
