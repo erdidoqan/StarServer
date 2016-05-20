@@ -160,7 +160,7 @@
                         canvas.height = 952;
                         break;
                 }
-                document.getElementById('canvasPaper').style.width="700px";
+                document.getElementById('canvasPaper').style.width="400px";
                 onDrawReceipt();
             }
         }
@@ -342,7 +342,6 @@
                     </dd>
                 </dl>
             </div>
-            <hr>
             <footer style="display: none;">
                 <dl style="display: none;">
                     <dt>URL</dt>
