@@ -4,7 +4,7 @@
         @include('home.partials.header')
     </head>
 
-    <body class="hold-transition login-page">
+    <body class="hold-transition login-page" style="margin-top: 20px;">
 
         <div class="page-container">
             @yield('content')
