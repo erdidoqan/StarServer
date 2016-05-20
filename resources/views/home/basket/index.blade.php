@@ -76,7 +76,7 @@
                     drawReceipt(32, 12, 576, 1.5);
                     break;
                 default :
-                    drawReceipt(30, 32, 576, 1.5);
+                    drawReceipt(30, 32, 576, 2.5);
                     break;
                 case 'inch4' :
                     drawReceipt(48, 48, 832, 2);
@@ -144,7 +144,7 @@
                 image.src = 'assets/img/logo.png' + '?' + new Date().getTime();
 
                 image.onload = function () {
-                    context.drawImage(image, 370 - image.width * logoScale, 0, image.width * logoScale, image.height * logoScale);
+                    context.drawImage(image, 450 - image.width * logoScale, 0, image.width * logoScale, image.height * logoScale);
                 }
 
                 image.onerror = function () {
@@ -166,11 +166,11 @@
                         break;
                     case 'inch3DotImpact' :
                         canvas.width = 576;
-                        canvas.height = 640;
+                        canvas.height = 840;
                         break;
                     default :
                         canvas.width = 576;
-                        canvas.height = 640;
+                        canvas.height = 840;
                         break;
                     case 'inch4' :
                         canvas.width = 832;
