@@ -104,9 +104,6 @@
 
                 cursor += lineSpace;
 
-                DrawCenterText('Thank you for your coming.');  cursor += lineSpace;
-                DrawCenterText("We hope you'll visit again."); cursor += lineSpace;
-
                 cursor += lineSpace;
 
                 DrawLeftText('Apple');    DrawRightText('$20.00');  cursor += lineSpace;
@@ -133,7 +130,7 @@
 
                 var image = new Image();
 
-                image.src = 'assets/img/pizzaexpress.png' + '?' + new Date().getTime();
+                image.src = 'assets/img/logo.png' + '?' + new Date().getTime();
 
                 image.onload = function () {
                     context.drawImage(image, canvas.width - image.width * logoScale, 0, image.width * logoScale, image.height * logoScale);
@@ -282,36 +279,21 @@
         }
         // -->
     </script>
-    <noscript>
-        Your browser does not support JavaScript!
-    </noscript>
-    </head>
-
-    <body>
 
     <div id="overlay">
         <div id="nowPrintingWrapper">
             <section id="nowPrinting">
                 <h1>Now Printing</h1>
-                <p><img src="images/icon_loading.gif" /></p>
+                <p><img src="assets/images/icon_loading.gif" /></p>
             </section>
         </div>
         <div id="nowLoadingWrapper">
             <section id="nowLoading">
                 <h1>Now Loading</h1>
-                <p><img src="images/icon_loading.gif" /></p>
+                <p><img src="assets/images/icon_loading.gif" /></p>
             </section>
         </div>
     </div>
-
-    <header id="global-header">
-        <h1><a href="A001.html"><img src="assets/img/pizzaexpress.png" alt="HOME" width="108" height="61"></a></h1>
-        <div id="sub-logo"><a href="http://www.star-m.jp/" target="_blank"><img src="assets/img/pizzaexpress.png" alt="" width="120" height="13"></a></div>
-    </header>
-
-    <section class="btmMg20">
-        <h2 class="h2-tit-01 btmMg20">Canvas : Receipt</h2>
-    </section>
 
     <form onsubmit='return false;' id="form">
         <div class="container">
@@ -324,35 +306,7 @@
                     </div>
                 </div>
             </div>
-            <div id="optionBlock">
-                <dl>
-                    <dt>Font</dt>
-                    <dd>:
-                        <select id='font' onchange='onDrawReceipt(); refocusFontSelectbox();'>
-                            <option selected='selected'>Arial</option>
-                            <option>Cambria</option>
-                            <option>Comic Sans MS</option>
-                            <option>Constantia</option>
-                            <option>Gabriola</option>
-                            <option>Georgia</option>
-                            <option>Segoe UI</option>
-                            <option>Fixedsys</option>
-                            <option>MS Serif</option>
-                        </select>
-                        &nbsp;<input id='italic' type='checkbox' onclick='onDrawReceipt()' />Italic
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>Paper Width</dt>
-                    <dd>:
-                        <select id='paperWidth' onchange='onResizeCanvas(); refocusWidthSelectbox();'>
-                            <option value='inch2' selected='selected'>2 Inch</option>
-                            <option value='inch3'>3 Inch</option>
-                            <option value='inch4'>4 Inch</option>
-                        </select>
-                    </dd>
-                </dl>
-            </div>
+
             <hr>
             <footer>
                 <dl>
