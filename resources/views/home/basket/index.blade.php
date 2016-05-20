@@ -53,6 +53,20 @@
             }
         }
 
+        function DrawBottomText(text) {
+            var canvas = document.getElementById('canvasPaper');
+
+            if (canvas.getContext) {
+                var context = canvas.getContext('2d');
+
+                context.textAlign = 'bottom';
+
+                context.fillText(text, rightPosition, cursor);
+
+                context.textAlign = 'start';
+            }
+        }
+
         function onDrawReceipt() {
             switch (document.getElementById('paperWidth').value) {
                 case 'inch2' :
@@ -123,6 +137,7 @@
                 DrawLeftText('Change');   DrawRightText('$90.00');  cursor += lineSpace;
 
 //      alert('Cursor:' + cursor + ', ' + 'Canvas:' + canvas.height);
+                DrawCenterText('"Service charge not include"'); cursor += lineSpace;
 
                 var image = new Image();
 
