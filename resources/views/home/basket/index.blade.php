@@ -99,7 +99,6 @@
 
 //      cursor = 0;
                 cursor = 55 * logoScale; // ロゴが入るスペースを空けておく
-
                 cursor += lineSpace;
 
                 cursor += lineSpace;
@@ -304,10 +303,38 @@
                     </div>
                 </div>
             </div>
-
-            <hr>
-            <footer>
+            <div id="optionBlock"  style="display: none;">
                 <dl>
+                    <dt>Font</dt>
+                    <dd>:
+                        <select id='font' onchange='onDrawReceipt(); refocusFontSelectbox();'>
+                            <option selected='selected'>Arial</option>
+                            <option>Cambria</option>
+                            <option>Comic Sans MS</option>
+                            <option>Constantia</option>
+                            <option>Gabriola</option>
+                            <option>Georgia</option>
+                            <option>Segoe UI</option>
+                            <option>Fixedsys</option>
+                            <option>MS Serif</option>
+                        </select>
+                        &nbsp;<input id='italic' type='checkbox' onclick='onDrawReceipt()' />Italic
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>Paper Width</dt>
+                    <dd>:
+                        <select id='paperWidth' onchange='onResizeCanvas(); refocusWidthSelectbox();'>
+                            <option value='inch2' selected='selected'>2 Inch</option>
+                            <option value='inch3'>3 Inch</option>
+                            <option value='inch4'>4 Inch</option>
+                        </select>
+                    </dd>
+                </dl>
+            </div>
+            <hr>
+            <footer style="display: none;">
+                <dl style="display: none;">
                     <dt>URL</dt>
                     <dd>:
                         <input id="url" type="text" value="http://localhost:8001/StarWebPRNT/SendMessage" /></dd>
@@ -333,17 +360,13 @@
                             </select>
                         </dd>
                     </d1>
-                    <input id="sendBtn" type="button" value="Send" onclick="onSendMessage()" />
+
             </footer>
+            <div class="col-sm-5">
+                <input id="sendBtn" class="btn btn-primary btn-block" type="button" value="Print" onclick="onSendMessage()" />
+            </div>
+
         </div>
     </form>
-
-    <div class="to_top">
-        <a href="#global-header">Go to top</a>
-    </div>
-    <footer id="global-footer" class="clearfix">
-        <a href="http://www.star-m.jp/products/s_print/sdk_webprnt/manual/index.htm" target="_blank"><img src="images/footer-logo.png" width="123" alt="" id="footer-logo"></a>
-        <img src="images/footer-image.png"height="54" alt=""/>
-    </footer>
 
 @endsection
