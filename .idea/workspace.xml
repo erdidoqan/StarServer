@@ -4,7 +4,7 @@
     <list default="true" id="b4b3d6b3-8fa5-492d-b5e6-3d493618f7b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home/basket/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/home/basket/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home/dash/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/home/dash/index.blade.php" />
     </list>
     <ignored path="StarServer.iws" />
@@ -27,28 +27,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-36.666668">
-              <caret line="341" column="37" selection-start-line="341" selection-start-column="37" selection-end-line="341" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.30810812">
+              <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
               <folding>
-                <element signature="e#12247#12269#0#HTML" expanded="true" />
-                <element signature="e#13768#13790#0#HTML" expanded="true" />
-                <element signature="e#13812#13834#0#HTML" expanded="true" />
+                <element signature="e#12420#12442#0#HTML" expanded="true" />
+                <element signature="e#13941#13963#0#HTML" expanded="true" />
+                <element signature="e#13985#14007#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home/dash/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4864865">
-              <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
-              <folding>
-                <element signature="e#4145#4171#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-54.375">
+              <caret line="87" column="72" selection-start-line="87" selection-start-column="72" selection-end-line="87" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,32 +64,12 @@
       <file leaf-file-name="BasketController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BasketController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.74026">
-              <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+            <state vertical-scroll-proportion="-19.375">
+              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
                 <element signature="e#120#142#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/home/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HTML5.js" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1132" column="8" selection-start-line="1132" selection-start-column="8" selection-end-line="1132" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -184,10 +162,10 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/b335f32eb5c7248a06307ec48929ae4ff3fc10b6.php" />
-        <option value="$PROJECT_DIR$/resources/views/home/basket/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" />
         <option value="$PROJECT_DIR$/resources/views/home/dash/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BasketController.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/basket/index.blade.php" />
       </list>
     </option>
   </component>
@@ -731,7 +709,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463785610447</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="jkhk newst">
+      <created>1463861496423</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1463861496423</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1047,7 +1031,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="78" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
           <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
+            <element signature="e#40#62#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1115,45 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1132" column="8" selection-start-line="1132" selection-start-column="8" selection-end-line="1132" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-36.666668">
-          <caret line="341" column="37" selection-start-line="341" selection-start-column="37" selection-end-line="341" selection-end-column="37" />
-          <folding>
-            <element signature="e#12247#12269#0#HTML" expanded="true" />
-            <element signature="e#13768#13790#0#HTML" expanded="true" />
-            <element signature="e#13812#13834#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BasketController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.74026">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-            <element signature="e#120#142#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.625">
@@ -1162,12 +1107,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0010537407">
+          <caret line="1132" column="8" selection-start-line="1132" selection-start-column="8" selection-end-line="1132" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.113513514">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home/dash/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4864865">
-          <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+        <state vertical-scroll-proportion="-54.375">
+          <caret line="87" column="72" selection-start-line="87" selection-start-column="72" selection-end-line="87" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BasketController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.375">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding>
-            <element signature="e#4145#4171#0#HTML" expanded="true" />
+            <element signature="e#6#85#0#PHP" expanded="true" />
+            <element signature="e#120#142#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/basket/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30810812">
+          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+          <folding>
+            <element signature="e#12420#12442#0#HTML" expanded="true" />
+            <element signature="e#13941#13963#0#HTML" expanded="true" />
+            <element signature="e#13985#14007#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

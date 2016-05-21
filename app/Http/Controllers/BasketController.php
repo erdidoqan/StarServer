@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Basket;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
@@ -18,7 +19,19 @@ class BasketController extends Controller
     {
         $allBasket = Basket::all();
         $date = Basket::orderBy('id','desc')->first();
-        return view('home.basket.index')->with('allBasket',$allBasket)->with('date',$date);
+        $total = DB::table('baskets')->sum('price');
+        $promotion = false;
+        $subTotal = false;
+        $toPay = $total;
+        $data = array(
+            'allBasket' => $allBasket,
+            'date' => $date,
+            'total' => $total,
+            'promotion' => $promotion,
+            'subTotal' => $subTotal,
+            'toPay' => $toPay
+        );
+        return view('home.basket.index',$data);
     }
 
     public function newBasket()

@@ -123,16 +123,22 @@
 
                 cursor += lineSpace;
 
-                DrawLeftText('Tax');      DrawRightText('$10.00');  cursor += lineSpace;
+                @if($subTotal)
+                    DrawCenterText('Sub-Total');      DrawRightText({{ $subTotal }});  cursor += lineSpace;
+                @endif
 
-                context.fillRect(0, cursor - 2, receiptWidth, 2);     // Underline
+                @if($promotion)
+                    DrawCenterText('Discount/Promotions');      DrawRightText({{ $promotion }});  cursor += lineSpace;
+                @endif
 
-                DrawLeftText('Total');    DrawRightText('$210.00'); cursor += lineSpace;
+
+                //context.fillRect(0, cursor - 2, receiptWidth, 2);     // Underline
+
+                DrawCenterText('TOTAL');    DrawRightText({{ $total }}); cursor += lineSpace;
+                DrawCenterText('TO PAY');    DrawRightText({{ $toPay }}); cursor += lineSpace;
 
                 cursor += lineSpace;
 
-                DrawLeftText('Received'); DrawRightText('$300.00'); cursor += lineSpace;
-                DrawLeftText('Change');   DrawRightText('$90.00');  cursor += lineSpace;
 
 //      alert('Cursor:' + cursor + ', ' + 'Canvas:' + canvas.height);
                 DrawCenterText('"Service charge not include"'); cursor += lineSpace;

@@ -85,7 +85,7 @@
                </div>
 
                <div class="col-sm-2">
-                   <a href="/basket/bosalt" class="btn btn-sm btn-danger" style="margin-left: -25px"><i class="glyphicon glyphicon-trash"></i></a>
+                   <a href="/basket/bosalt" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                </div>
            </div>
        </div>
