@@ -344,12 +344,12 @@
                             <option>Comic Sans MS</option>
                             <option>Constantia</option>
                             <option>Gabriola</option>
-                            <option>Georgia</option>
+                            <option selected='selected'>Georgia</option>
                             <option>Segoe UI</option>
                             <option>Fixedsys</option>
                             <option>MS Serif</option>
                             <option>Lato</option>
-                            <option selected='selected'>Roboto</option>
+                            <option>Roboto</option>
                         </select>
                         &nbsp;<input id='italic' type='checkbox' onclick='onDrawReceipt()' />Italic
                     </dd>
