@@ -80,11 +80,11 @@
                    <p><input class="form-control input-xs" name="quanty" maxlength="2" value="1"> x £ 16,50</p>
                    <hr>
                @endforeach
-               <div class="col-sm-10">
+               <div class="col-sm-10 col-xs-10">
                    <a href="/basket" class="btn btn-block btn-sm btn-success">Print</a>
                </div>
 
-               <div class="col-sm-2">
+               <div class="col-sm-2 col-xs-2">
                    <a href="/basket/bosalt" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                </div>
            </div>
