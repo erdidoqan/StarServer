@@ -120,7 +120,7 @@
                 cursor += lineSpace;
                 DrawLeftText('Till No: 3');
                 cursor += lineSpace;
-                DrawLeftText('Table: 6 Covers: 1');
+                DrawLeftText('Table: {{$table}} Covers: 1');
                 cursor += lineSpace;
                 cursor += lineSpace;
                 @foreach($allBasket as $basket)

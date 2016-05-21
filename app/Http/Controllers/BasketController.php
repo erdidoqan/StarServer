@@ -26,6 +26,7 @@ class BasketController extends Controller
         $promotion = number_format($promotion,2);
         $subTotal = false;
         $toPay = $total;
+        $table = rand(1,9);
 
         $data = array(
             'allBasket' => $allBasket,
@@ -33,7 +34,8 @@ class BasketController extends Controller
             'total' => $total,
             'promotion' => $promotion,
             'subTotal' => $subTotal,
-            'toPay' => $toPay
+            'toPay' => $toPay,
+            'table' => $table
         );
         return view('home.basket.index',$data);
     }
