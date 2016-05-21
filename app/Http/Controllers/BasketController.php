@@ -23,6 +23,7 @@ class BasketController extends Controller
         $total = DB::table('baskets')->sum('price');
         $total = number_format($total,2);
         $promotion = DB::table('baskets')->sum('promotion');
+        $promotion = number_format($promotion,2);
         $subTotal = false;
         $toPay = $total;
 

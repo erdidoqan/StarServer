@@ -76,7 +76,7 @@
                     drawReceipt(32, 12, 576, 1.5);
                     break;
                 default :
-                    drawReceipt(30, 32, 576, 2.5);
+                    drawReceipt(30, 32, 676, 2.5);
                     break;
                 case 'inch4' :
                     drawReceipt(48, 48, 832, 2);
@@ -187,7 +187,7 @@
                         break;
                     default :
                         canvas.width = 576;
-                        canvas.height = 840;
+                        canvas.height = 940;
                         break;
                     case 'inch4' :
                         canvas.width = 832;
