@@ -187,7 +187,7 @@
                         break;
                     default :
                         canvas.width = 576;
-                        canvas.height = 940;
+                        canvas.height = 1000;
                         break;
                     case 'inch4' :
                         canvas.width = 832;
