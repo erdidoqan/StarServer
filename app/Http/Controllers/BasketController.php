@@ -40,4 +40,12 @@ class BasketController extends Controller
             return Redirect::to('/');
         }
     }
+
+    public function bosalt()
+    {
+        $basket = Basket::truncate();
+        if($basket){
+            return Redirect::to('/');
+        }
+    }
 }

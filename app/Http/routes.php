@@ -15,4 +15,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/addNewMenu', 'DashboardController@postAddNewMenu');
     Route::get('/basket', 'BasketController@basket');
     Route::post('/basket/new','BasketController@newBasket');
+    Route::get('/basket/bosalt','BasketController@bosalt');
 });
