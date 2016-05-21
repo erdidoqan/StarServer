@@ -87,7 +87,7 @@
 
                                     <label class="btn btn-info">
                                         <input type="radio" name="promotionType" id="promotionType" autocomplete="off" value="percent">
-                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                        <i class="fa fa-percent" aria-hidden="true"></i>
                                     </label>
 
                                     <label class="btn btn-info">

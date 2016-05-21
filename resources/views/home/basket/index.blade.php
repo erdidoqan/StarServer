@@ -116,8 +116,19 @@
                 DrawCenterText("CR5 2NJ"); cursor += lineSpace;
                 DrawCenterText("VAT NO: 627 0767 30"); cursor += lineSpace;
                 cursor += lineSpace;
+                DrawLeftText('SERKAN {{$date}}');DrawRightText('T64715F11');
+                cursor += lineSpace;
+                DrawLeftText('Till No: 3');
+                cursor += lineSpace;
+                DrawLeftText('Table: 6 Covers: 1');
+                cursor += lineSpace;
+                cursor += lineSpace;
                 @foreach($allBasket as $basket)
-                    DrawLeftText('{{$basket->menu_name}}');    DrawRightText('{{$basket->price}}');  cursor += lineSpace;
+                    @if($basket->promotion)
+                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText('{{$basket->price}} P');  cursor += lineSpace;
+                    @else
+                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText('{{$basket->price}} .');  cursor += lineSpace;
+                    @endif
                 @endforeach
 
 
@@ -129,12 +140,14 @@
 
                 @if($promotion)
                     DrawCenterText('Discount/Promotions');      DrawRightText({{ $promotion }});  cursor += lineSpace;
+                    cursor += lineSpace;
                 @endif
 
 
                 //context.fillRect(0, cursor - 2, receiptWidth, 2);     // Underline
 
                 DrawCenterText('TOTAL');    DrawRightText({{ $total }}); cursor += lineSpace;
+                cursor += lineSpace;
                 DrawCenterText('TO PAY');    DrawRightText({{ $toPay }}); cursor += lineSpace;
 
                 cursor += lineSpace;
