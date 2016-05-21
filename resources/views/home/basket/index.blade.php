@@ -334,7 +334,7 @@
                     </div>
                 </div>
             </div>
-            <div id="optionBlock">
+            <div id="optionBlock" style="display: none;">
                 <dl>
                     <dt>Font</dt>
                     <dd>:
@@ -344,17 +344,17 @@
                             <option>Comic Sans MS</option>
                             <option>Constantia</option>
                             <option>Gabriola</option>
-                            <option selected='selected'>Georgia</option>
+                            <option>Georgia</option>
                             <option>Segoe UI</option>
                             <option>Fixedsys</option>
                             <option>MS Serif</option>
                             <option>Lato</option>
                             <option>Roboto</option>
-                            <option>RAWENGULK</option>
+                            <option selected='selected'>RawengulkLight</option>
                         </select>
                     </dd>
                 </dl>
-                <dl style="display: none;">
+                <dl>
                     <dt>Paper Width</dt>
                     <dd>:
                         <select id='paperWidth' onchange='onResizeCanvas(); refocusWidthSelectbox();'>
