@@ -84,7 +84,7 @@
                    <a href="/basket" class="btn btn-block btn-sm btn-success">Print</a>
                </div>
 
-               <div class="col-sm-2 col-xs-2">
+               <div class="col-sm-2 col-xs-2" style="margin-left: -25px">
                    <a href="/basket/bosalt" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                </div>
            </div>
