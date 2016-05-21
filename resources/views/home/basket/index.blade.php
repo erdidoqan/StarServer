@@ -245,7 +245,8 @@
 //
 //      msg += 'ResponseText : [ ' + response.responseText + ' ]\n';
 
-                alert(msg);
+                alert('Your bill is printed');
+                window.location.replace("/basket/bosalt");
             }
 
             trader.onError = function (response) {
