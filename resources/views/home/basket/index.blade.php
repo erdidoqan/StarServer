@@ -334,7 +334,7 @@
                     </div>
                 </div>
             </div>
-            <div id="optionBlock"  style="display: none;">
+            <div id="optionBlock">
                 <dl>
                     <dt>Font</dt>
                     <dd>:
@@ -350,11 +350,11 @@
                             <option>MS Serif</option>
                             <option>Lato</option>
                             <option>Roboto</option>
+                            <option>RAWENGULK</option>
                         </select>
-                        &nbsp;<input id='italic' type='checkbox' onclick='onDrawReceipt()' />Italic
                     </dd>
                 </dl>
-                <dl>
+                <dl style="display: none;">
                     <dt>Paper Width</dt>
                     <dd>:
                         <select id='paperWidth' onchange='onResizeCanvas(); refocusWidthSelectbox();'>
