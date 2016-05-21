@@ -81,11 +81,11 @@
                    <hr>
                @endforeach
                <div class="col-sm-10 col-xs-10">
-                   <a href="/basket" class="btn btn-block btn-sm btn-success">Print</a>
+                   <a href="/basket" class="btn btn-block btn-lg btn-success">Print</a>
                </div>
 
                <div class="col-sm-2 col-xs-2" style="margin-left: -25px">
-                   <a href="/basket/bosalt" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+                   <a href="/basket/bosalt" class="btn btn-lg btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                </div>
            </div>
        </div>
