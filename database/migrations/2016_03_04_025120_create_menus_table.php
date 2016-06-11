@@ -19,7 +19,7 @@ class CreateMenusTable extends Migration
             $table->foreign('category_id')
                 ->references('id')->on('categories')
                 ->onDelete('cascade');
-            $table->string('price');
+            $table->float('price');
             $table->timestamps();
         });
     }

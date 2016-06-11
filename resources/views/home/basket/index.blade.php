@@ -1,3 +1,4 @@
+
 @extends('home.layouts.master')
 @section('content')
     <script src="{{asset('assets/js/StarWebPrintBuilder.js')}}"></script>
@@ -40,6 +41,7 @@
         }
 
         function DrawRightText(text) {
+
             var canvas = document.getElementById('canvasPaper');
 
             if (canvas.getContext) {
@@ -84,6 +86,17 @@
             }
         }
 
+        Number.prototype.formatMoney = function(c, d, t){
+            var n = this,
+                    c = isNaN(c = Math.abs(c)) ? 2 : c,
+                    d = d == undefined ? "." : d,
+                    t = t == undefined ? "," : t,
+                    s = n < 0 ? "-" : "",
+                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                    j = (j = i.length) > 3 ? j % 3 : 0;
+            return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+        };
+
         function drawReceipt(fontSize, lineSpace, receiptWidth, logoScale) {
             var canvas = document.getElementById('canvasPaper');
 
@@ -124,10 +137,13 @@
                 cursor += lineSpace;
                 cursor += lineSpace;
                 @foreach($allBasket as $basket)
+
                     @if($basket->promotion)
-                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText('{{$basket->price}} P');  cursor += lineSpace;
+                        var price = ({{ $basket->price }}).formatMoney(2);
+                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText(price + 'P');  cursor += lineSpace;
                     @else
-                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText('{{$basket->price}} .');  cursor += lineSpace;
+                        var price = ({{ $basket->price }}).formatMoney(2);
+                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText(price);  cursor += lineSpace;
                     @endif
                 @endforeach
 
@@ -145,16 +161,18 @@
 
 
                 //context.fillRect(0, cursor - 2, receiptWidth, 2);     // Underline
+                var total = ({{ $total }}).formatMoney(2);
 
-                DrawCenterText('TOTAL');    DrawRightText({{ $total }}); cursor += lineSpace;
+                DrawCenterText('TOTAL');    DrawRightText(total); cursor += lineSpace;
                 cursor += lineSpace;
-                DrawCenterText('TO PAY');    DrawRightText({{ $toPay }}); cursor += lineSpace;
+                DrawCenterText('TO PAY');    DrawRightText({!! $toPay !!}); cursor += lineSpace;
 
                 cursor += lineSpace;
 
 
 //      alert('Cursor:' + cursor + ', ' + 'Canvas:' + canvas.height);
-                DrawCenterText('"Service charge not include"'); cursor += lineSpace;
+                DrawCenterText('"Service charge not included"'); cursor += lineSpace;
+                DrawCenterText('For a chance to win a £500 Gift Card'); cursor += lineSpace;
 
                 var image = new Image();
 
@@ -244,6 +262,7 @@
 //      msg += 'Status : [ ' + response.status + ' ]\n';
 //
 //      msg += 'ResponseText : [ ' + response.responseText + ' ]\n';
+
 
                 alert('Your bill is printed');
                 window.location.replace("/basket/bosalt");

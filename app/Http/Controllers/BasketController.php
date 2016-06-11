@@ -20,12 +20,13 @@ class BasketController extends Controller
         $allBasket = Basket::all();
         $date = date('d/m/Y h:i');
         $total = DB::table('baskets')->sum('price');
-        $total = number_format($total,2);
+        //var_dump($total);
         $promotion = DB::table('baskets')->sum('promotion');
         $promotion = number_format($promotion,2);
         $subTotal = false;
         $toPay = $total;
         $table = rand(1,9);
+        $total = number_format($total,2,'.','');
 
         $data = array(
             'allBasket' => $allBasket,

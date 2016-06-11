@@ -27,7 +27,7 @@ class CreateBasketsTable extends Migration
                 ->references('id')->on('categories')
                 ->onDelete('cascade');
 
-            $table->string('price');
+            $table->float('price');
             $table->string('promotion_type')->nullable();
             $table->string('promotion')->nullable();
             $table->integer('count');
