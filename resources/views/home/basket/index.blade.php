@@ -173,6 +173,10 @@
 //      alert('Cursor:' + cursor + ', ' + 'Canvas:' + canvas.height);
                 DrawCenterText('"Service charge not included"'); cursor += lineSpace;
                 DrawCenterText('For a chance to win a £500 Gift Card'); cursor += lineSpace;
+                DrawCenterText('in our Monthly Prize Draw please go to'); cursor += lineSpace;
+                DrawCenterText('www.mypizzaexpress.com to tell us about'); cursor += lineSpace;
+                DrawCenterText('your visit. Your invite code is: 3426'); cursor += lineSpace;
+                DrawCenterText('-------------------------------------');cursor += lineSpace;
 
                 var image = new Image();
 
