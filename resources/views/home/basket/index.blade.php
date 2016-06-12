@@ -97,6 +97,21 @@
             return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
         };
 
+        Object.prototype.yeniBoyut = function (prop, factor) {
+            if (prop) {
+                factor = parseFloat(factor) || 2;
+                var self = this.length ? this : [this],
+                        cur, size, unit;
+                for (var i = 0, len = self.length; i < len; i++) {
+                    var cur = window.getComputedStyle(self[i],null)[prop],
+                            size = parseFloat(cur.replace(/\D/g,'')),
+                            unit = cur.replace(/\d+/g,'');
+                    self[i].style[prop] = (size * factor) + unit;
+                }
+            }
+            return this;
+        };
+
         function drawReceipt(fontSize, lineSpace, receiptWidth, logoScale) {
             var canvas = document.getElementById('canvasPaper');
 
@@ -127,16 +142,15 @@
                 DrawCenterText("Ground Floor Block A Trinity Square"); cursor += lineSpace;
                 DrawCenterText("127 Brighton Road"); cursor += lineSpace;
                 DrawCenterText("CR5 2NJ"); cursor += lineSpace;
-                DrawCenterText("VAT NO: 627 0767  30"); cursor += lineSpace;
+                DrawCenterText("VAT  NO: 627 0767  30"); cursor += lineSpace;
                 cursor += lineSpace;
-                DrawLeftText('SERKAN  {{$date}}');DrawRightText('T64715F11');
+                DrawLeftText('SERKAN   {{$date}}');DrawRightText('T64715F11');
                 cursor += lineSpace;
                 DrawLeftText('Till No: 3');
                 cursor += lineSpace;
                 DrawLeftText('Table: {{$table}} Covers: 1');cursor += lineSpace;
                 DrawCenterText('--------------------------------------------------------------------');cursor += lineSpace;
                 @foreach($allBasket as $basket)
-
                     @if($basket->promotion)
                         var price = ({{ $basket->price * $basket->count }}).formatMoney(2);
                         DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText(price + ' P');  cursor += lineSpace;
@@ -144,38 +158,28 @@
                         var price = ({{ $basket->price * $basket->count }}).formatMoney(2);
                         DrawLeftText('{{$basket->count}} {{$basket->menu_name}}'); DrawRightText(price + '   ');  cursor += lineSpace;
                     @endif
-
-
-
-
                 @endforeach
-
-
-                cursor += lineSpace;
 
                 @if($subTotal)
                     DrawCenterText('Sub-Total');      DrawRightText({{ $subTotal }});  cursor += lineSpace;
                 @endif
-
+                DrawRightText('----------');cursor += lineSpace;
                 @if($promotion)
                     DrawCenterText('Discount/Promotions');      DrawRightText({{ $promotion }});  cursor += lineSpace;
-                    cursor += lineSpace;
                 @endif
 
 
-                //context.fillRect(0, cursor - 2, receiptWidth, 2);     // Underline
                 var total = ({{ $total }}).formatMoney(2);
                 var toPay = ({{ $toPay }}).formatMoney(2);
 
+                DrawRightText('----------');cursor += lineSpace;
                 DrawCenterText('TOTAL');    DrawRightText(total); cursor += lineSpace;
-                cursor += lineSpace;
-                DrawCenterText('TO PAY');    DrawRightText(toPay); cursor += lineSpace;
+                DrawRightText('----------');cursor += lineSpace;
+                DrawCenterText('TO  PAY');    DrawRightText(toPay); cursor += lineSpace;
 
                 cursor += lineSpace;
 
-
-//      alert('Cursor:' + cursor + ', ' + 'Canvas:' + canvas.height);
-                DrawCenterText('"Service charge not included"'); cursor += lineSpace;
+                DrawRightText('"Service charge not included"         '); cursor += lineSpace;cursor += lineSpace;cursor += lineSpace;
                 DrawCenterText('For a chance to win a £500 Gift Card'); cursor += lineSpace;
                 DrawCenterText('in our Monthly Prize Draw please go to'); cursor += lineSpace;
                 DrawCenterText('www.mypizzaexpress.com to tell us about'); cursor += lineSpace;
@@ -185,11 +189,13 @@
                 DrawCenterText('PizzaExpress iPhone or Android app');cursor += lineSpace;
                 DrawCenterText('& Paypal account');cursor += lineSpace;
                 DrawCenterText('Download the app & enter the code below');cursor += lineSpace;cursor += lineSpace;
-                var randomSayi = '{{ rand(1000,9999) }}';
+
+                var randomSayi = ({{ rand(1000,9999) }});
                 var randomSayi1 = '{{ rand(1000,9999) }}';
                 var randomSayi2 = '{{ rand(1000,9999) }}';
                 DrawCenterText(randomSayi + '   ' + randomSayi1 + '   ' + randomSayi2);cursor += lineSpace;cursor += lineSpace;
-                DrawCenterText('--------------------------------------------------------------------');cursor += lineSpace;
+                DrawCenterText('--------------------------------------------------------------------');cursor += lineSpace;cursor += lineSpace;
+                DrawLeftText('Reprinted:  {{ $reprinted }}');
 
                 var image = new Image();
 
@@ -222,7 +228,7 @@
                         break;
                     default :
                         canvas.width = 576;
-                        canvas.height = 1500;
+                        canvas.height = 1550;
                         break;
                     case 'inch4' :
                         canvas.width = 832;

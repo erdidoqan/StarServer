@@ -19,12 +19,14 @@ class BasketController extends Controller
     {
         $allBasket = Basket::all();
         $date = date('d/m/Y  h:i');
+        $reprinted = date('d/m/Y  h:i:s');
         $total = DB::table('baskets')->sum('price');
         $promotion = DB::table('baskets')->sum('promotion');
         $promotion = number_format($promotion,2);
         $subTotal = false;
         $toPay = $total;
         $table = rand(1,9);
+        $randomBot = rand(1000,9999);
 
         $data = array(
             'allBasket' => $allBasket,
@@ -33,7 +35,9 @@ class BasketController extends Controller
             'promotion' => $promotion,
             'subTotal' => $subTotal,
             'toPay' => $toPay,
-            'table' => $table
+            'table' => $table,
+            'reprinted' => $reprinted,
+            'randomBot' => $randomBot
         );
         return view('home.basket.index',$data);
     }
