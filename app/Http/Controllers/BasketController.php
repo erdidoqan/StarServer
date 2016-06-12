@@ -18,15 +18,13 @@ class BasketController extends Controller
     public function basket()
     {
         $allBasket = Basket::all();
-        $date = date('d/m/Y h:i');
+        $date = date('d/m/Y  h:i');
         $total = DB::table('baskets')->sum('price');
-        //var_dump($total);
         $promotion = DB::table('baskets')->sum('promotion');
         $promotion = number_format($promotion,2);
         $subTotal = false;
         $toPay = $total;
         $table = rand(1,9);
-        $total = number_format($total,2,'.','');
 
         $data = array(
             'allBasket' => $allBasket,
@@ -42,13 +40,18 @@ class BasketController extends Controller
 
     public function newBasket()
     {
+        if(Input::get('promotionType') == 'percent'){
+            $pro = Input::get('promotion') / 100 * Input::get('price');
+        }else{
+            $pro = Input::get('promotion');
+        }
         $newBasket = Basket::firstOrCreate(array(
             'menu_name' => Input::get('menu_name'),
             'menu_id' => Input::get('menu_id'),
             'category_id' => Input::get('category_id'),
             'price' => Input::get('price'),
             'promotion_type' => Input::get('promotionType'),
-            'promotion' => Input::get('promotion')
+            'promotion' => $pro
         ));
 
         $newBasket->count = Input::get('count');

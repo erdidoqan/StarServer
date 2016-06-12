@@ -123,28 +123,31 @@
                 rightPosition  = (canvas.width - 16);
 
 //      cursor = 0;
-                cursor = 120 * logoScale; // ロゴが入るスペースを空けておく
+                cursor = 120 * logoScale;
                 DrawCenterText("Ground Floor Block A Trinity Square"); cursor += lineSpace;
                 DrawCenterText("127 Brighton Road"); cursor += lineSpace;
                 DrawCenterText("CR5 2NJ"); cursor += lineSpace;
-                DrawCenterText("VAT NO: 627 0767 30"); cursor += lineSpace;
+                DrawCenterText("VAT NO: 627 0767  30"); cursor += lineSpace;
                 cursor += lineSpace;
-                DrawLeftText('SERKAN {{$date}}');DrawRightText('T64715F11');
+                DrawLeftText('SERKAN  {{$date}}');DrawRightText('T64715F11');
                 cursor += lineSpace;
                 DrawLeftText('Till No: 3');
                 cursor += lineSpace;
-                DrawLeftText('Table: {{$table}} Covers: 1');
-                cursor += lineSpace;
-                cursor += lineSpace;
+                DrawLeftText('Table: {{$table}} Covers: 1');cursor += lineSpace;
+                DrawCenterText('--------------------------------------------------------------------');cursor += lineSpace;
                 @foreach($allBasket as $basket)
 
                     @if($basket->promotion)
-                        var price = ({{ $basket->price }}).formatMoney(2);
-                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText(price + 'P');  cursor += lineSpace;
+                        var price = ({{ $basket->price * $basket->count }}).formatMoney(2);
+                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText(price + ' P');  cursor += lineSpace;
                     @else
-                        var price = ({{ $basket->price }}).formatMoney(2);
-                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}');    DrawRightText(price);  cursor += lineSpace;
+                        var price = ({{ $basket->price * $basket->count }}).formatMoney(2);
+                        DrawLeftText('{{$basket->count}} {{$basket->menu_name}}'); DrawRightText(price + '   ');  cursor += lineSpace;
                     @endif
+
+
+
+
                 @endforeach
 
 
@@ -166,7 +169,7 @@
 
                 DrawCenterText('TOTAL');    DrawRightText(total); cursor += lineSpace;
                 cursor += lineSpace;
-                DrawCenterText('TO PAY');    DrawRightText({!! $toPay !!}); cursor += lineSpace;
+                DrawCenterText('TO PAY');    DrawRightText(toPay); cursor += lineSpace;
 
                 cursor += lineSpace;
 
@@ -176,8 +179,17 @@
                 DrawCenterText('For a chance to win a £500 Gift Card'); cursor += lineSpace;
                 DrawCenterText('in our Monthly Prize Draw please go to'); cursor += lineSpace;
                 DrawCenterText('www.mypizzaexpress.com to tell us about'); cursor += lineSpace;
-                DrawCenterText('your visit. Your invite code is: 3426'); cursor += lineSpace;
-                DrawCenterText('-------------------------------------');cursor += lineSpace;
+                DrawCenterText('your visit. Your invite code is: 3426'); cursor += lineSpace;cursor += lineSpace;
+                DrawCenterText('--------------------------------------------------------------------');cursor += lineSpace;
+                DrawCenterText('You can pay your bill using the');cursor += lineSpace;
+                DrawCenterText('PizzaExpress iPhone or Android app');cursor += lineSpace;
+                DrawCenterText('& Paypal account');cursor += lineSpace;
+                DrawCenterText('Download the app & enter the code below');cursor += lineSpace;cursor += lineSpace;
+                var randomSayi = '{{ rand(1000,9999) }}';
+                var randomSayi1 = '{{ rand(1000,9999) }}';
+                var randomSayi2 = '{{ rand(1000,9999) }}';
+                DrawCenterText(randomSayi + '   ' + randomSayi1 + '   ' + randomSayi2);cursor += lineSpace;cursor += lineSpace;
+                DrawCenterText('--------------------------------------------------------------------');cursor += lineSpace;
 
                 var image = new Image();
 
@@ -210,7 +222,7 @@
                         break;
                     default :
                         canvas.width = 576;
-                        canvas.height = 1200;
+                        canvas.height = 1500;
                         break;
                     case 'inch4' :
                         canvas.width = 832;
