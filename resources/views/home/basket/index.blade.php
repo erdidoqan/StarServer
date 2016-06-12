@@ -162,6 +162,7 @@
 
                 //context.fillRect(0, cursor - 2, receiptWidth, 2);     // Underline
                 var total = ({{ $total }}).formatMoney(2);
+                var toPay = ({{ $toPay }}).formatMoney(2);
 
                 DrawCenterText('TOTAL');    DrawRightText(total); cursor += lineSpace;
                 cursor += lineSpace;
